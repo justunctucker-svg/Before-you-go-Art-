@@ -1,0 +1,185 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="2400" viewBox="0 0 1600 2400">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#030509"/>
+      <stop offset="0.6" stop-color="#08101e"/>
+      <stop offset="1" stop-color="#05080f"/>
+    </linearGradient>
+    <!-- floor the Mirror stands on -->
+    <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#121a2a"/>
+      <stop offset="1" stop-color="#03050a"/>
+    </linearGradient>
+    <!-- the Mirror's glass -->
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#161e2c"/>
+      <stop offset="0.5" stop-color="#0a0f18"/>
+      <stop offset="1" stop-color="#05080d"/>
+    </linearGradient>
+    <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#c8d2e2" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#c8d2e2" stop-opacity="0.07"/>
+      <stop offset="1" stop-color="#c8d2e2" stop-opacity="0"/>
+    </linearGradient>
+    <!-- the man's reflection: cold gray, fading toward the bottom -->
+    <linearGradient id="figure" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8a95a8" stop-opacity="0.32"/>
+      <stop offset="0.7" stop-color="#5d6779" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#5d6779" stop-opacity="0"/>
+    </linearGradient>
+    <!-- floor reflection of the Mirror -->
+    <linearGradient id="reflect" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1a2435" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#1a2435" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="red" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ff3b30" stop-opacity="0.7"/>
+      <stop offset="1" stop-color="#ff3b30" stop-opacity="0"/>
+    </radialGradient>
+    <!-- steel watch case -->
+    <linearGradient id="steel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d6dbe2"/>
+      <stop offset="0.45" stop-color="#7d8592"/>
+      <stop offset="0.6" stop-color="#aeb5bf"/>
+      <stop offset="1" stop-color="#3c424c"/>
+    </linearGradient>
+    <linearGradient id="dial" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#c9ced6"/>
+      <stop offset="1" stop-color="#8b929d"/>
+    </linearGradient>
+    <linearGradient id="strap" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#9aa1ab"/>
+      <stop offset="1" stop-color="#4a505a"/>
+    </linearGradient>
+    <radialGradient id="warm" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffd98c" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#ffd98c" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+    <filter id="blur2" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2.2"/>
+    </filter>
+    <filter id="blur4" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="4"/></filter>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="11"/>
+      <feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.045 0"/>
+    </filter>
+    <clipPath id="glassClip">
+      <rect x="620" y="1100" width="360" height="740"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1600" height="2400" fill="url(#bg)"/>
+
+  <!-- BLURB -->
+  <g text-anchor="middle" font-family="Caladea, 'Liberation Serif', serif">
+    <text x="800" y="250" font-size="60" fill="#dde2ea" letter-spacing="1">He was gone for two years.</text>
+    <text x="800" y="330" font-size="60" fill="#dde2ea" letter-spacing="1">The world went on for fifty-eight.</text>
+    <rect x="770" y="385" width="60" height="2" fill="#e8b45a"/>
+
+    <g font-size="35" fill="#9ba5b4">
+      <text x="800" y="470">When he steps out of the capsule, the wife he kissed</text>
+      <text x="800" y="520">goodbye has been dead for decades, and the little girl</text>
+      <text x="800" y="570">he promised to come home to is an old woman.</text>
+
+      <text x="800" y="650">Earth is quieter now. Polite. A government called the</text>
+      <text x="800" y="700">Continuity keeps everyone calm, and glowing Mirrors</text>
+      <text x="800" y="750">watch every home. The past has been tidied away.</text>
+      <text x="800" y="800" fill="#c3cad5">Remembering it is a crime.</text>
+
+      <text x="800" y="880">All he has left is a cheap steel watch, a lifetime of</text>
+      <text x="800" y="930">missed birthdays, and one last chance to reach his</text>
+      <text x="800" y="980" font-style="italic" fill="#c3cad5">daughter before she goes.</text>
+    </g>
+  </g>
+
+  <!-- FLOOR -->
+  <rect y="1840" width="1600" height="560" fill="url(#floor)" opacity="0.55"/>
+  <path d="M 0 1840 H 1600" stroke="#2b364a" stroke-width="1.5" opacity="0.5"/>
+  <!-- the Mirror reflected in the floor -->
+  <rect x="610" y="1842" width="380" height="160" fill="url(#reflect)"/>
+
+  <!-- THE MIRROR -->
+  <rect x="610" y="1090" width="380" height="760" rx="4" fill="#1d2534"/>
+  <rect x="620" y="1100" width="360" height="740" fill="url(#glass)"/>
+  <g clip-path="url(#glassClip)">
+    <!-- the man's reflection: head and shoulders, standing too close -->
+    <g fill="url(#figure)" filter="url(#blur4)" opacity="0.85">
+      <path d="M 800 1340 C 830 1340 848 1366 848 1402 C 848 1440 832 1470 812 1478
+               L 812 1494 C 868 1504 916 1522 940 1556 C 956 1580 962 1640 966 1840
+               L 634 1840 C 638 1640 644 1580 660 1556 C 684 1522 732 1504 788 1494
+               L 788 1478 C 768 1470 752 1440 752 1402 C 752 1366 770 1340 800 1340 Z"/>
+    </g>
+    <!-- faint rim light on one shoulder -->
+    <path d="M 846 1400 C 846 1440 832 1468 814 1478 M 870 1508 C 910 1520 932 1540 944 1566"
+          fill="none" stroke="#aab4c4" stroke-width="2" opacity="0.18" filter="url(#blur2)"/>
+    <!-- glass sheen -->
+    <polygon points="660,1100 760,1100 560,1840 460,1840" fill="url(#sheen)"/>
+  </g>
+  <!-- the small red light, always on -->
+  <circle cx="958" cy="1122" r="22" fill="url(#red)"/>
+  <circle cx="958" cy="1122" r="4" fill="#ff5a4f"/>
+
+  <!-- THE WATCH, lying on the floor in front of the Mirror -->
+  <g transform="translate(1040 2040) rotate(-14) scale(1 0.56)">
+    <!-- soft shadow -->
+    <ellipse cx="8" cy="18" rx="240" ry="80" fill="#000" opacity="0.55" filter="url(#soft)"/>
+    <!-- open steel bracelet, links on either side -->
+    <g fill="url(#strap)" stroke="#2a2f37" stroke-width="2">
+      <rect x="-230" y="-34" width="34" height="68" rx="4"/>
+      <rect x="-192" y="-34" width="34" height="68" rx="4"/>
+      <rect x="-154" y="-34" width="34" height="68" rx="4"/>
+      <rect x="-116" y="-34" width="34" height="68" rx="4"/>
+      <rect x="82" y="-34" width="34" height="68" rx="4"/>
+      <rect x="120" y="-34" width="34" height="68" rx="4"/>
+      <rect x="158" y="-34" width="34" height="68" rx="4"/>
+      <rect x="196" y="-34" width="34" height="68" rx="4"/>
+    </g>
+    <!-- case -->
+    <circle r="92" fill="url(#steel)" stroke="#2a2f37" stroke-width="2"/>
+    <rect x="88" y="-12" width="18" height="24" rx="3" fill="url(#steel)" stroke="#2a2f37" stroke-width="2"/>
+    <circle r="74" fill="url(#dial)"/>
+    <!-- hour marks -->
+    <g stroke="#2a303a" stroke-width="4" stroke-linecap="round">
+      <path d="M 0 -66 V -54"/><path d="M 66 0 H 54"/><path d="M 0 66 V 54"/><path d="M -66 0 H -54"/>
+    </g>
+    <g stroke="#2a303a" stroke-width="2" stroke-linecap="round">
+      <path d="M 33 -57 L 30 -52"/><path d="M 57 -33 L 52 -30"/><path d="M 57 33 L 52 30"/>
+      <path d="M 33 57 L 30 52"/><path d="M -33 57 L -30 52"/><path d="M -57 33 L -52 30"/>
+      <path d="M -57 -33 L -52 -30"/><path d="M -33 -57 L -30 -52"/>
+    </g>
+    <!-- two minutes to midnight -->
+    <g stroke="#14181f" stroke-linecap="round">
+      <path d="M 0 0 L -4 -40" stroke-width="6"/>
+      <path d="M 0 0 L -12 -60" stroke-width="4"/>
+    </g>
+    <path d="M 0 10 L 3 -62" stroke="#b5432f" stroke-width="1.6" stroke-linecap="round"/>
+    <circle r="5" fill="#14181f"/>
+    <!-- scratches on the crystal -->
+    <g stroke="#f4f6f9" stroke-linecap="round" opacity="0.55">
+      <path d="M -50 -20 L 10 -48" stroke-width="1.2"/>
+      <path d="M -30 30 L 40 6" stroke-width="1"/>
+      <path d="M 20 40 L 52 28" stroke-width="0.9"/>
+      <path d="M -62 6 L -40 -2" stroke-width="0.8"/>
+    </g>
+    <!-- one warm glint on the glass -->
+    <ellipse cx="-30" cy="-34" rx="30" ry="13" fill="url(#warm)" transform="rotate(-30 -30 -34)"/>
+  </g>
+
+  <!-- FOOTER -->
+  <!-- the Continuity's circle as a small mark -->
+  <circle cx="190" cy="2240" r="36" fill="none" stroke="#dfe4ec" stroke-width="2" opacity="0.35"/>
+  <text x="250" y="2232" font-family="Inter, sans-serif" font-weight="300" font-size="22"
+        letter-spacing="8" fill="#7f8999">BEFORE YOU GO</text>
+  <text x="250" y="2266" font-family="Inter, sans-serif" font-weight="300" font-size="20"
+        letter-spacing="6" fill="#5c6575">A NOVEL</text>
+
+  <!-- barcode area (placeholder for the ISBN) -->
+  <rect x="1180" y="2150" width="300" height="170" fill="#f2f2f0"/>
+  <text x="1330" y="2244" text-anchor="middle" font-family="Inter, sans-serif" font-size="18"
+        letter-spacing="4" fill="#9a9a9a">ISBN / BARCODE</text>
+
+  <rect width="1600" height="2400" filter="url(#grain)"/>
+</svg>
