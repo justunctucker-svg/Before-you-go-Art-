@@ -1,0 +1,164 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="2400" viewBox="0 0 1600 2400">
+  <defs>
+    <!-- Sky: black at the top, sinking into deep navy at the horizon -->
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#030509"/>
+      <stop offset="0.55" stop-color="#08101e"/>
+      <stop offset="1" stop-color="#14213a"/>
+    </linearGradient>
+    <!-- Sea: navy fading to black -->
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0d1729"/>
+      <stop offset="1" stop-color="#020306"/>
+    </linearGradient>
+    <!-- The beam: warm gold that thins to nothing -->
+    <linearGradient id="beam" gradientUnits="userSpaceOnUse" x1="1010" y1="1665" x2="120" y2="890">
+      <stop offset="0" stop-color="#ffd27a" stop-opacity="0.75"/>
+      <stop offset="0.25" stop-color="#f4b955" stop-opacity="0.32"/>
+      <stop offset="0.7" stop-color="#e3a445" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#e3a445" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffe0a0" stop-opacity="0.9"/>
+      <stop offset="0.18" stop-color="#f6bf5c" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#f6bf5c" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="glint" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f6c46a" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#f6c46a" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="towerShade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#000" stop-opacity="0"/>
+      <stop offset="0.55" stop-color="#000" stop-opacity="0.05"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0.55"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+    <filter id="softer" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="7"/>
+      <feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.045 0"/>
+    </filter>
+    <clipPath id="towerClip">
+      <path d="M 980 1705 L 1040 1705 L 1056 1950 L 964 1950 Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- SKY -->
+  <rect width="1600" height="1960" fill="url(#sky)"/>
+
+  <!-- Stars: few and far apart -->
+  <g fill="#c9d2e0">
+    <circle cx="212" cy="640" r="1.6" opacity="0.6"/>
+    <circle cx="1388" cy="702" r="1.3" opacity="0.5"/>
+    <circle cx="1240" cy="1010" r="1.1" opacity="0.4"/>
+    <circle cx="470" cy="1210" r="1.2" opacity="0.35"/>
+    <circle cx="1480" cy="1290" r="1.4" opacity="0.45"/>
+    <circle cx="860" cy="760" r="1.0" opacity="0.4"/>
+    <circle cx="130" cy="1480" r="1.0" opacity="0.3"/>
+    <circle cx="1120" cy="1440" r="0.9" opacity="0.3"/>
+    <circle cx="640" cy="560" r="1.1" opacity="0.45"/>
+    <circle cx="1530" cy="560" r="1.0" opacity="0.35"/>
+  </g>
+  <!-- The one light that is coming home -->
+  <circle cx="300" cy="1060" r="9" fill="#f3e6c8" opacity="0.18" filter="url(#softer)"/>
+  <circle cx="300" cy="1060" r="2.6" fill="#fff4dc" opacity="0.95"/>
+
+  <!-- THE CIRCLE: the Continuity's mark, drawn faintly across the sky -->
+  <circle cx="800" cy="1230" r="530" fill="none" stroke="#dfe4ec" stroke-width="2.2" opacity="0.13"/>
+
+  <!-- HORIZON GLOW -->
+  <rect x="0" y="1880" width="1600" height="80" fill="#2a3a58" opacity="0.25" filter="url(#soft)"/>
+
+  <!-- BEAM (reaching up and out, past the circle, toward the light) -->
+  <g style="mix-blend-mode:screen">
+    <polygon points="1010,1665 20,770 0,930" fill="url(#beam)" filter="url(#soft)"/>
+    <polygon points="1010,1665 80,840 72,872" fill="url(#beam)" opacity="0.7"/>
+    <!-- faint back-scatter on the other side -->
+    
+  </g>
+
+  <!-- SEA -->
+  <rect y="1960" width="1600" height="440" fill="url(#sea)"/>
+  <!-- cold gray swell lines -->
+  <g stroke="#7b8799" stroke-linecap="round" fill="none">
+    <path d="M 90 1990 H 420" stroke-width="1.4" opacity="0.18"/>
+    <path d="M 1180 1985 H 1520" stroke-width="1.4" opacity="0.15"/>
+    <path d="M 260 2040 H 640" stroke-width="1.6" opacity="0.13"/>
+    <path d="M 1240 2060 H 1460" stroke-width="1.6" opacity="0.12"/>
+    <path d="M 60 2130 H 360" stroke-width="1.8" opacity="0.09"/>
+    <path d="M 520 2190 H 780" stroke-width="1.8" opacity="0.07"/>
+    <path d="M 1300 2170 H 1560" stroke-width="1.8" opacity="0.08"/>
+  </g>
+  <!-- the lamp's reflection breaking on the water -->
+  <g fill="#f6c46a">
+    <rect x="1002" y="1990" width="16" height="3" opacity="0.55"/>
+    <rect x="994" y="2010" width="34" height="3" opacity="0.4"/>
+    <rect x="1006" y="2032" width="20" height="3" opacity="0.32"/>
+    <rect x="986" y="2058" width="44" height="3" opacity="0.22"/>
+    <rect x="1000" y="2090" width="26" height="3" opacity="0.15"/>
+    <rect x="990" y="2128" width="38" height="3" opacity="0.09"/>
+    <rect x="1004" y="2170" width="18" height="3" opacity="0.05"/>
+  </g>
+
+  <!-- ROCK -->
+  <path d="M 880 1972 C 900 1950 925 1946 950 1938 L 975 1930 C 1000 1926 1030 1928 1060 1934
+           C 1090 1940 1112 1950 1128 1962 C 1140 1970 1150 1974 1170 1978 L 1180 1984 L 860 1984 Z"
+        fill="#05070b"/>
+  <path d="M 950 1938 L 975 1930 C 1000 1926 1030 1928 1060 1934 L 1040 1940 C 1010 1936 985 1936 960 1942 Z"
+        fill="#1a2232" opacity="0.8"/>
+
+  <!-- LIGHTHOUSE -->
+  <g>
+    <!-- striped tower -->
+    <g clip-path="url(#towerClip)">
+      <rect x="950" y="1700" width="120" height="260" fill="#c7ccd4"/>
+      <rect x="950" y="1735" width="120" height="38" fill="#1b2638"/>
+      <rect x="950" y="1812" width="120" height="40" fill="#1b2638"/>
+      <rect x="950" y="1892" width="120" height="42" fill="#1b2638"/>
+      <rect x="950" y="1700" width="120" height="260" fill="url(#towerShade)"/>
+    </g>
+    <!-- a single lit window on the dark side -->
+    <rect x="1022" y="1862" width="6" height="11" fill="#f6c46a" opacity="0.85"/>
+    <!-- gallery -->
+    <rect x="966" y="1694" width="88" height="11" fill="#0b111c"/>
+    <g stroke="#0b111c" stroke-width="2">
+      <path d="M 970 1694 V 1680 M 990 1694 V 1680 M 1010 1694 V 1680 M 1030 1694 V 1680 M 1050 1694 V 1680"/>
+      <path d="M 966 1680 H 1054"/>
+    </g>
+    <!-- lantern room -->
+    <rect x="986" y="1642" width="48" height="40" fill="#ffd98c"/>
+    <g stroke="#0b111c" stroke-width="3">
+      <path d="M 1002 1642 V 1682 M 1018 1642 V 1682"/>
+    </g>
+    <!-- roof -->
+    <path d="M 978 1644 L 1010 1612 L 1042 1644 Z" fill="#0b111c"/>
+    <path d="M 1010 1612 V 1598" stroke="#0b111c" stroke-width="3"/>
+    <circle cx="1010" cy="1597" r="4" fill="#0b111c"/>
+  </g>
+
+  <!-- lamp halo -->
+  <circle cx="1010" cy="1662" r="150" fill="url(#halo)" style="mix-blend-mode:screen"/>
+
+  <!-- TYPOGRAPHY -->
+  <g fill="#dde2ea" text-anchor="middle">
+    <text x="800" y="300" font-family="Caladea, 'Bitstream Charter', 'Liberation Serif', serif"
+          font-size="148" letter-spacing="30">BEFORE</text>
+    <text x="800" y="455" font-family="Caladea, 'Bitstream Charter', 'Liberation Serif', serif"
+          font-size="148" letter-spacing="30">YOU GO</text>
+    <!-- small gold rule -->
+    <rect x="770" y="540" width="60" height="2" fill="#e8b45a"/>
+    <text x="800" y="620" font-family="Caladea, 'Liberation Serif', serif" font-style="italic"
+          font-size="40" fill="#8f99a8" letter-spacing="1">Someone kept the light on.</text>
+  </g>
+
+  <g fill="#9aa4b3" text-anchor="middle" font-family="Inter, sans-serif" font-weight="300">
+    <text x="800" y="2300" font-size="30" letter-spacing="14">A NOVEL</text>
+  </g>
+
+  <!-- film grain over everything -->
+  <rect width="1600" height="2400" filter="url(#grain)"/>
+</svg>
